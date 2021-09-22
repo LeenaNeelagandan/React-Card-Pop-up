@@ -1,0 +1,159 @@
+import * as React from "https://cdn.skypack.dev/react@17.0.1";
+import * as ReactDOM from "https://cdn.skypack.dev/react-dom@17.0.1";
+
+function App() {
+  return ( <>
+    <Nav/>
+    <div className="main"> 
+      <div className="wrapper">
+        
+        <div id="firstCard">
+          <Card/>
+        </div>
+        
+        <div id="secondCard">
+           <Card2/>
+        </div>
+        
+        <div id="thirdCard">
+          <Card3/>
+        </div>
+        
+        <div id="fourthCard">
+          <Card4/>
+        </div>
+        
+        <div id="fifthCard">
+          <Card5/>
+        </div>
+
+        <div id="sixthCard">
+          <Card6/>
+        </div>
+        
+      </div>
+     </div>
+      
+    </>
+  );
+}
+
+// class showAndHide extends React.component {
+//   state {
+//     divContainer : false, 
+//   }
+// }
+
+
+function Nav() {
+  return (
+    <div className="NavMaadna">
+      <h1><a href="#">Lee's</a></h1>
+      <button className="getDataBtn" onclick = "myFunction()" > Get Data! </button>
+    </div>
+  );
+}
+
+function myFunction() {
+  let x = document.getElementById("secondCard");
+  if (x.style.display == none) {
+    x.style.display = block;
+  } 
+}
+
+
+function Card(props) {
+  return (
+    <div className="card">
+      <div className="cardBody">
+        <img src="https://reqres.in/img/faces/1-image.jpg"          className="cardImage"/>
+        <h2 className="cardTitle">George Bluth</h2>     
+        <p className="cardDescription">
+          george.bluth@reqres.in</p>
+        <button className="cardBtn"> View More! </button>
+      </div>
+    </div>
+  );
+}
+
+
+function Card2(props) {
+  return (
+    <div className="card">
+      <div className="cardBody">
+        <img className="cardImage" src="https://reqres.in/img/faces/2-image.jpg" />
+        <h2 className="cardTitle">Janet Weaver</h2>
+        <p className="cardDescription">
+          janet.weaver@reqres.in</p>
+        <button className="cardBtn"> View More! </button>
+      </div>
+    </div>
+  );
+}
+
+function Card3(props) {
+  return (
+    <div className="card">
+      <div className="cardBody">
+        <img className="cardImage"
+          src="https://reqres.in/img/faces/3-image.jpg" />
+        <h2 className="cardTitle">Emma Wong</h2>
+        <p className="cardDescription">
+          emma.wong@reqres.in</p>
+        <button className="cardBtn"> View More! </button>
+      </div>
+    </div>
+  );
+}
+
+
+function Card4(props) {
+  return (
+    <div className="card">
+      <div className="cardBody">
+        <img className="cardImage" src="https://reqres.in/img/faces/4-image.jpg"/>
+        <h2 className="cardTitle">Eve Holt</h2>
+        <p className="cardDescription">
+          eve.holt@reqres.in</p>
+        <button className="cardBtn"> View More! </button>
+      </div>
+    </div>
+  );
+}
+
+function Card5(props) {
+    return (
+      <div className="card">
+        <div className="cardBody">
+          <img
+            src="https://reqres.in/img/faces/5-image.jpg"
+            className="cardImage"
+          />
+          <h2 className="cardTitle">Charles Morris</h2>
+          <p className="cardDescription">charles.morris@reqres.in</p>
+          <button className="cardBtn"> View More! </button>
+        </div>
+      </div>
+   );
+}
+
+
+function Card6(props) {
+    return (
+      <div className="card">
+        <div className="cardBody">
+          <img
+            src="https://reqres.in/img/faces/6-image.jpg"
+            className="cardImage"
+          />
+          <h2 className="cardTitle">Tracey Ramos</h2>
+      <p className="cardDescription">tracey.ramos@reqres.in</p>
+          <button className="cardBtn"> View More! </button>
+        </div>
+      </div>
+   );
+}
+
+
+
+ReactDOM.render(<App/>,document.getElementById("root"));
